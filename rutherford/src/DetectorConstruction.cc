@@ -62,7 +62,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
                         0);                         // copy number
 
   // b. Add the foil target
-  G4double targetThickness = 100 * um;
+  G4double targetThickness = 300 * um;
   G4double targetSize = 2 * cm;
   G4Box* targetSolid = new G4Box("targetSolid", 0.5 * targetThickness,
                                  0.5 * targetSize, 0.5 * targetSize);
