@@ -24,6 +24,9 @@
 #include "G4UIExecutive.hh"
 #include "G4VisExecutive.hh"
 
+// For scoring
+#include "G4ScoringManager.hh"
+
 int main(int argc, char** argv) {
   // Setup for interactive session only
   //
@@ -64,6 +67,10 @@ int main(int argc, char** argv) {
   //       because some actions (e.g. PrimaryGenerator) needs information from
   //       the detector.
   runManager->SetUserInitialization(new ActionInitialization());
+
+  // Add scoring
+  // - this allows scoring commands be used in the UI
+  G4ScoringManager* scoringManager = G4ScoringManager::GetScoringManager();
 
   // Add visualization:
   // - create a G4VisExecutive object as the Visualization Manager

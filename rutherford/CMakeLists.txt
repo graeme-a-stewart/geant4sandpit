@@ -41,6 +41,7 @@ target_link_libraries(rutherford ${Geant4_LIBRARIES} )
 #
 set(PROJECT_SCRIPTS
   vis.mac
+  scoreBox.vis
   )
 
 foreach(_script ${PROJECT_SCRIPTS})

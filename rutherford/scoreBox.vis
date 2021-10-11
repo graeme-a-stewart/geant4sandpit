@@ -1,0 +1,14 @@
+# Create the scoring volume box
+/score/create/boxMesh backDetector
+/score/mesh/boxSize 0.1 1.9 1.9 cm
+/score/mesh/nBin 1 30 30
+/score/mesh/translate/xyz 1.9 0 0 cm
+
+# Score flux
+/score/quantity/cellFlux flux
+/score/close
+
+# Run and display
+/tracking/storeTrajectory 0
+/run/beamOn 1000
+/score/drawProjection backDetector flux
