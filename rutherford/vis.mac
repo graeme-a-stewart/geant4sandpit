@@ -23,11 +23,11 @@
 
 # ------------------------------------------------------------------------------
 # Set the World volume invisible 
-/vis/geometry/set/visibility logic-World 0  true
-/vis/geometry/set/colour logic-World 0 0 1 1 0.1
+/vis/geometry/set/visibility worldLogical 0  true
+/vis/geometry/set/colour worldLogical 0 0 1 1 0.1
 
 # ------------------------------------------------------------------------------
-/vis/geometry/set/colour logic-Target 0 0 0 1 0.3
+/vis/geometry/set/colour targetLogical 0 0 0 1 0.3
 /vis/viewer/set/style surface 
 
 # ------------------------------------------------------------------------------
