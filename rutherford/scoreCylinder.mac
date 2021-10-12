@@ -1,0 +1,23 @@
+# Create a scoring cylinder
+/score/create/cylinderMesh hermeticDetector
+/score/mesh/cylinderSize 1.9 1.9 cm
+/score/mesh/nBin 30 30 30
+/score/mesh/rotate/rotateY 90 deg
+
+# Score flux
+/score/quantity/cellFlux flux
+/score/close
+
+# Run and display
+/tracking/storeTrajectory 0
+/run/beamOn 1000
+
+# Taken from extended/runAndEvent/RE04 example this
+# will show slices of the cylinder that allow the
+# flux to be seen more easily
+/control/alias iAxis 1
+/control/loop drawCylinderSlice.mac iColumn 0 29 7
+
+# This is less useful as the outer surface gets so
+# little flux
+#/score/drawProjection hermeticDetector flux
